@@ -26,23 +26,11 @@ public class RuletaDAO {
         return listaruleta;
     }
     public boolean eliminar(String no){
-        for (int i = 0; i < listaruleta.size(); i++) {
-            if(listaruleta.get(i).getMonto().equals(no)){
-                listaruleta.remove(i);
-                return false;
-            }
-            
-    }
+        
         return false;
 }
     public boolean modificar(Usuario emodificar){
-        for (int i = 0; i < listaruleta.size(); i++) {
-            if (listaruleta.get(i).getMonto().equals(emodificar.getContraseña())) {
-                listaruleta.set(i, emodificar);
-                return true;
-            }
-            
-        }
+        
         return false;
     }
 }

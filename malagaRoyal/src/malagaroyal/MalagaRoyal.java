@@ -4,6 +4,8 @@
  */
 package malagaroyal;
 
+import malagaroyal.view.ScreenManager;
+
 /**
  *
  * @author UIS
@@ -14,7 +16,7 @@ public class MalagaRoyal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ScreenManager.abrirMenu();
     }
     
 }

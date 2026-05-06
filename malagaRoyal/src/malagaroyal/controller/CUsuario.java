@@ -39,7 +39,6 @@ public class CUsuario implements ActionListener{
             }
             
         });
-        llenarTabla();
     }
     
 
@@ -53,26 +52,12 @@ public class CUsuario implements ActionListener{
             registrar();
         } 
     }
-    public void llenarTabla(){
-        DefaultTableModel modeloTabla =(DefaultTableModel) vista.getTblusuario().getModel();
-        modeloTabla.setRowCount(0);
-        List<Usuario> listaUsusario = dao.consultar();
-        Object[] fila = new Object[4];
-        for (Usuario usu : listaUsusario) {
-            fila[0] = usu.getContraseña();
-            fila[1] = usu.getNombre();
-            fila[2] = usu.getApellido();
-            fila[3] = usu.getTelefono();
-            modeloTabla.addRow(fila);
-        }
-        
-    }
+    
     private void eliminar(){
         String con = vista.getPWFcontraseña().getText();
         if (dao.eliminar(con)) {
             JOptionPane.showMessageDialog(vista, "usuario eliminado");
             limpiarCampos();
-            llenarTabla();
         }else{
             JOptionPane.showMessageDialog(vista, "no se encontro");
         }
@@ -86,7 +71,7 @@ public class CUsuario implements ActionListener{
             Usuario usu = capturarDatos();
             if(dao.registrar(usu)){
                 JOptionPane.showMessageDialog(vista, "usuario guardado");
-                llenarTabla();
+                
                 limpiarCampos();
             }
         } catch (Exception e) {
@@ -95,10 +80,7 @@ public class CUsuario implements ActionListener{
     }
     private Usuario capturarDatos(){
         return new Usuario(
-        vista.getTxtnombre().getText();
-        vista.getTxtapellido().getText();
-        vista.getTxttelefono().getText();
-    );
+        vista.getTxttelefono().getText());
     }
     private void limpiarCampos(){
         vista.getPWFcontraseña().setText("");
