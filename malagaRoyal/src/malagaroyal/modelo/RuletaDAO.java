@@ -4,6 +4,7 @@
  */
 package malagaroyal.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,26 +12,14 @@ import java.util.List;
  * @author UIS
  */
 public class RuletaDAO {
-    private static List<Ruleta> listaruleta; 
+    private static List<Ruleta> listaruleta = new ArrayList<>(); 
     
-    public boolean registrar (Ruleta rul){
-        try {
-            listaruleta.add(rul);
-            return true;
-        } catch (Exception e) {
-            System.out.println("error al guardar");
-            return false;
-        }
+    public Usuario NomJugador () {
+        for
     }
-    public List<Ruleta> consultar(){
-        return listaruleta;
-    }
-    public boolean eliminar(String no){
+    
+    
+    public boolean girar (float saldo; float num) {
         
-        return false;
-}
-    public boolean modificar(Usuario emodificar){
-        
-        return false;
     }
 }

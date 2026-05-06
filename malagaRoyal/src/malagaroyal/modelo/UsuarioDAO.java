@@ -46,12 +46,4 @@ public class UsuarioDAO {
         }
         return false;
     }
-    public Usuario buscar(String nombre) {
-        for (Usuario usu : listaUsuarios) {
-            if (usu.getNombre().equals(nombre)){
-                return usu;
-            }
-        }
-        return null;
-    }
 }

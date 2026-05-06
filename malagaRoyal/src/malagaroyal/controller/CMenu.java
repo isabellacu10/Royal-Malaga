@@ -7,8 +7,6 @@ package malagaroyal.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import malagaroyal.modelo.Usuario;
-import malagaroyal.modelo.UsuarioDAO;
 import malagaroyal.view.ScreenManager;
 import malagaroyal.view.VMenu;
 
@@ -18,7 +16,6 @@ import malagaroyal.view.VMenu;
  */
 public class CMenu implements ActionListener{
     private VMenu vista;
-    private UsuarioDAO dao;
         public CMenu (VMenu vista){
             this.vista.getBtningresar().addActionListener(this);
             this.vista.getBtnsalir().addActionListener(this);
@@ -35,14 +32,7 @@ public class CMenu implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vista.getBtningresar()){
-            String con = vista.getTXTnombre().getText();
-            Usuario usu = dao.buscar(con);
-            if(usu != null){
-                ScreenManager.abrirRuleta();
-            }else{
-                ScreenManager.abrirUsuario();
-            }
-            
+            ScreenManager.abrirUsuario();
         }else if(e.getSource() == vista.getBtnsalir()){
             System.exit(0);
         }
