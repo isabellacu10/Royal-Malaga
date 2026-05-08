@@ -9,28 +9,14 @@ package malagaroyal.modelo;
  * @author UIS
  */
 public class Ruleta {
-    private float monto;
     private int numero;
-    private float saldo;
-    private String mensaje;
     private int NumGanador;
     private Usuario jugador;
 
     public Ruleta(float monto, int numero, float saldo, String mensaje, int NumGanador, Usuario jugador) {
-        this.monto = monto;
         this.numero = numero;
-        this.saldo = saldo;
-        this.mensaje = mensaje;
         this.NumGanador = NumGanador;
         this.jugador = jugador;
-    }
-
-    public float getMonto() {
-        return monto;
-    }
-
-    public void setMonto(float monto) {
-        this.monto = monto;
     }
 
     public int getNumero() {
@@ -39,22 +25,6 @@ public class Ruleta {
 
     public void setNumero(int numero) {
         this.numero = numero;
-    }
-
-    public float getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(float saldo) {
-        this.saldo = saldo;
-    }
-
-    public String getMensaje() {
-        return mensaje;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
     }
 
     public int getNumGanador() {
@@ -75,7 +45,7 @@ public class Ruleta {
 
     @Override
     public String toString() {
-        return "Ruleta{" + "monto=" + monto + ", numero=" + numero + ", saldo=" + saldo + ", mensaje=" + mensaje + ", NumGanador=" + NumGanador + ", jugador=" + jugador + '}';
+        return "Ruleta{" + ", numero=" + numero + ", saldo=" + ", NumGanador=" + NumGanador + ", jugador=" + jugador + '}';
     }
 
     

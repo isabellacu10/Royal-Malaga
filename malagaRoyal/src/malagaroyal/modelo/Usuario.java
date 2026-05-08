@@ -16,15 +16,7 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String telefono;
-    private List<Ruleta> saldo;
-
-    public Usuario(String contraseña) {
-        this.contraseña = contraseña;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-        
-    }
+    private float saldo;
 
     public String getContraseña() {
         return contraseña;
@@ -58,11 +50,26 @@ public class Usuario {
         this.telefono = telefono;
     }
 
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
+
+    public Usuario(String contraseña, String nombre, String apellido, String telefono, float saldo) {
+        this.contraseña = contraseña;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.saldo = saldo;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "contrase\u00f1a=" + contraseña + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + '}';
+        return "Usuario{" + "contrase\u00f1a=" + contraseña + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", saldo=" + saldo + '}';
     }
-    
-    
+
     
 }
